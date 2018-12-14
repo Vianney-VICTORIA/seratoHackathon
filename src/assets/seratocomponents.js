@@ -1,54 +1,54 @@
-const images = require.context('./images', true, /\.png$/)
+const image = require.context('./images', true, /\.png$/)
 
 
 const seratocomponents = {
-  input: [
+  inputs: [
     {
       id: 1,
-      name: 'rca-input-left',
-      src: images('./rca-input-left.png'),
+      name: '1/4 inch RCA Input1',
+      src: image('./rca-input-left.png'),
     },
     {
       id: 2,
-      name: 'rca-input-right',
-      src: './images/rca-input-right.png',
+      name: '1/4 inch RCA Input2',
+      src: image('./rca-input-right.png'),
     },
     {
       id: 3,
-      name: 'usb-input',
-      src: './images/usb-input.png',
+      name: 'USB Input',
+      src: image('./usb-input.png'),
     },
     {
       id: 4,
-      name: 'XLR-input',
-      src: './images/XLR-input.png',
+      name: 'XLR Input',
+      src: image('./XLR-input.png'),
     },
     {
       id: 5,
-      name: '1-8-input',
-      src: './images/1-8-input.png',
+      name: '1/8 inch Input',
+      src: image('./1-8-input.png'),
     },
   ],
-  output: [
+  outputs: [
     {
       id: 6,
-      name: 'rca-output-left',
-      src: './images/rca-input-left.png',
+      name: '1/4 inch RCA Output1',
+      src: image('./rca-input-left.png'),
     },
     {
       id: 7,
-      name: 'rca-output-right',
-      src: './images/rca-input-right.png',
+      name: '1/4 inch RCA Output2',
+      src: image('./rca-input-right.png'),
     },
     {
       id: 8,
-      name: 'XLR-output',
-      src: './images/XLR-output.png',
+      name: 'XLR Output',
+      src: image('./XLR-output.png'),
     },
     {
       id: 9,
-      name: '1-8-input',
-      src: './images/1-8-input.png',
+      name: '1/8 Output',
+      src: image('./1-8-input.png'),
     },
   ],
 }

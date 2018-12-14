@@ -2,21 +2,17 @@
   <div>
     <h3>Inputs</h3>
     <div class="wrapperComponent">
-      <div class="item-component" v-for="input in seratocomponents.inputs">
-        <div v-draggable="draggableValue">
-          <div :ref="handleId">
-            <div class="item-component-img" v-bind:style="{ backgroundImage: 'url(' + input.src + ')' }" v-bind:alt="input.name"></div>
-          </div>
+      <div class="item-component" v-for="input in seratocomponents.inputs" >
+        <div>
+          <div class="item-component-img" v-bind:style="{ backgroundImage: 'url(' + input.src + ')' }" v-bind:alt="input.name"></div>
         </div>
       </div>
     </div>
     <h3>Outputs</h3>
     <div class="wrapperComponent">
       <div class="item-component" v-for="output in seratocomponents.outputs">
-        <div v-draggable="draggableValue">
-          <div :ref="handleId">
-            <div class="item-component-img" v-bind:style="{ backgroundImage: 'url(' + output.src + ')' }" v-bind:alt="output.name"></div>
-          </div>
+        <div>
+          <div class="item-component-img" v-bind:style="{ backgroundImage: 'url(' + output.src + ')' }" v-bind:alt="output.name"></div>
         </div>
       </div>
     </div>
@@ -25,29 +21,18 @@
 
 <script type="text/ecmascript-6">
 import seratocomponents from '../assets/seratocomponents.js';
-import { Draggable } from 'draggable-vue-directive';
 
 export default {
   name: 'SeratoLibrary',
-  directives: {
-    Draggable,
-  },
   data() {
     return {
       seratocomponents,
-      handleId: "handle-id",
-      draggableValue: {},
     };
   },
   mounted() {
-    this.draggableValue.handle = this.$refs[this.handleId];
-    this.draggableValue.onPositionChange = this.onPosChanged;
+
   },
   methods: {
-    onPosChanged: function (pos) {
-      console.log('left corner', pos.x);
-      console.log('top corner', pos.y);
-    },
   },
 };
 </script>

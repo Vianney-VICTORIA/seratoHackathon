@@ -1,7 +1,12 @@
 <template>
   <div id="serato">
     <h1>UX Tool to design Hardware</h1>
-    <SeratoLibrary />
+    <div class="wrapperLibrary">
+      <SeratoLibrary />
+    </div>
+    <div class="wrapperCanvas">
+
+    </div>
   </div>
 </template>
 
@@ -15,5 +20,22 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
+.wrapperLibrary{
+  display: inline-block;
+  background-color: aquamarine;
+  height: 80vh;
+  width:20vw;
+  margin-right: 15px;
+  position: fixed;
+}
+.wrapperCanvas{
+  background-color: coral;
+  display: inline-block;
+  height: 80vh;
+  width:50vw;
+  position: fixed;
+}
+
 </style>

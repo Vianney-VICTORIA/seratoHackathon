@@ -22,7 +22,7 @@
       return {
         handleId: "handle-id",
         draggableValue: {}
-    }
+      }
     },
     mounted() {
       this.draggableValue.handle = this.$refs[this.handleId];

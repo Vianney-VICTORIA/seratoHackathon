@@ -16,7 +16,7 @@
 <script type="text/ecmascript-6">
   export default {
     name: 'About',
-    data: () => {
+    data() {
       return {
         newTodo: '',
         todos: []

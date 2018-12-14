@@ -8,13 +8,18 @@
       </div>
       drag and drop using handler
     </div>
+
+    <SeratoLibrary />
   </div>
 </template>
 
-
 <script type="text/ecmascript-6">
+  import SeratoLibrary from '@/components/SeratoLibrary.vue'
   import { Draggable } from 'draggable-vue-directive'
   export default {
+    components: {
+      SeratoLibrary,
+    },
     directives: {
       Draggable
     },
@@ -38,5 +43,4 @@
 </script>
 
 <style>
-
 </style>

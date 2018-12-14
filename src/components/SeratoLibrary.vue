@@ -13,32 +13,32 @@
 </template>
 
 <script type="text/ecmascript-6">
-import seratocomponents from '../assets/seratocomponents.js'
-import { Draggable } from 'draggable-vue-directive'
+import seratocomponents from '../assets/seratocomponents.js';
+import { Draggable } from 'draggable-vue-directive';
 
 export default {
   name: 'SeratoLibrary',
   directives: {
-    Draggable
+    Draggable,
   },
   data() {
     return {
       seratocomponents,
       handleId: "handle-id",
-      draggableValue: {}
-    }
+      draggableValue: {},
+    };
   },
   mounted() {
     this.draggableValue.handle = this.$refs[this.handleId];
     this.draggableValue.onPositionChange = this.onPosChanged;
   },
   methods: {
-    onPosChanged: function(pos) {
-      // console.log("left corner", pos.x);
-      // console.log("top corner", pos.y);
-    }
-  }
-}
+    onPosChanged: function (pos) {
+      console.log('left corner', pos.x);
+      console.log('top corner', pos.y);
+    },
+  },
+};
 </script>
 
 <style>

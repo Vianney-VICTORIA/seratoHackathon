@@ -11,13 +11,14 @@
 </template>
 
 <script type="text/ecmascript-6">
-import SeratoLibrary from '@/components/SeratoLibrary.vue'
+import SeratoLibrary from '@/components/SeratoLibrary.vue';
+
 export default {
   name: 'Serato',
   components: {
     SeratoLibrary,
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss">
@@ -28,14 +29,12 @@ export default {
   height: 80vh;
   width:20vw;
   margin-right: 15px;
-  position: fixed;
 }
 .wrapperCanvas{
   background-color: coral;
   display: inline-block;
   height: 80vh;
   width:50vw;
-  position: fixed;
 }
 
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div class="wrapperComponent">
-    <h2 v-bind:class="seratocomponents.input[0].name">Component Library</h2>
+    <h2 v-bind:class="seratocomponents.input[0].src">Component Library</h2>
 
     <div v-draggable="draggableValue">
       <div :ref="handleId">
-        <img v-bin:src="seratocomponents.input[0].src" alt="move">
+        <img :src="seratocomponents.input[0].src" alt="move">
       </div>
       drag and drop using handler
     </div>
@@ -13,7 +13,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-import seratocomponents from '../assets/data/seratocomponents.js'
+import seratocomponents from '../assets/seratocomponents.js'
 import { Draggable } from 'draggable-vue-directive'
 
 export default {

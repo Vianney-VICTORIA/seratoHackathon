@@ -1,9 +1,12 @@
+const images = require.context('./images', true, /\.png$/)
+
+
 const seratocomponents = {
   input: [
     {
       id: 1,
       name: 'rca-input-left',
-      src: './assets/images/rca-input-left.png',
+      src: images('./rca-input-left.png'),
     },
     {
       id: 2,
@@ -50,4 +53,4 @@ const seratocomponents = {
   ],
 }
 
-export default seratocomponents
+export default seratocomponents;

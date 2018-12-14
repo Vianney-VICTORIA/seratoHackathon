@@ -22,19 +22,35 @@ export default {
 </script>
 
 <style lang="scss">
-
+#app{
+  position: fixed;
+}
 .wrapperLibrary{
   display: inline-block;
   background-color: aquamarine;
   height: 80vh;
+  min-height: 80vh;
+  max-height: 80vh;
   width:20vw;
+  min-width: 20vh;
+  max-width: 20vh;
   margin-right: 15px;
+  position: relative;
+  top: 0;
+  overflow: scroll;
 }
 .wrapperCanvas{
   background-color: coral;
   display: inline-block;
   height: 80vh;
+  height: 80vh;
+  min-height: 80vh;
+  max-height: 80vh;
   width:50vw;
+  min-width: 80vh;
+  max-width: 80vh;
+  top: 0;
+  z-index: 1;
 }
 
 </style>

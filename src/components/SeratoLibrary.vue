@@ -1,15 +1,22 @@
 <template>
-
   <div class="wrapperComponent">
-    <h2 v-bind:class="seratocomponents.input[0].src">Component Library</h2>
-    <div v-draggable="draggableValue">
-      <div :ref="handleId">
-        <img :src="seratocomponents.input[0].src" alt="move">
+    <h3>Inputs</h3>
+    <ul v-for="input in seratocomponents.inputs">
+      <div v-draggable="draggableValue">
+        <div :ref="handleId">
+            <img :src="input.src" v-bind:alt="input.name">
+        </div>
       </div>
-      drag and drop using handler
-    </div>
+    </ul>
+    <h3>Outputs</h3>
+    <ul v-for="output in seratocomponents.outputs">
+      <div v-draggable="draggableValue">
+        <div :ref="handleId">
+          <img :src="output.src" v-bind:alt="output.name">
+        </div>
+      </div>
+    </ul>
   </div>
-
 </template>
 
 <script type="text/ecmascript-6">

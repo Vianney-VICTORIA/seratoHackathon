@@ -3,8 +3,8 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/serato">Serato</router-link>
-
+      <router-link to="/serato">Serato</router-link> |
+      <router-link to="/hardware">Hardware Customization</router-link>
     </div>
     <router-view/>
   </div>

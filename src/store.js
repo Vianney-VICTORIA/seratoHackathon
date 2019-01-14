@@ -5,12 +5,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-
+    layoutArea: [],
   },
   mutations: {
-
-  },
-  actions: {
-
+    addLayerToLayout(state, layoutItems) {
+      state.layoutArea.push(layoutItems);
+    },
   },
 });

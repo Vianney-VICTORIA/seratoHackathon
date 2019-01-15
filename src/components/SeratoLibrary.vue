@@ -6,7 +6,7 @@
         >
       <div class="wrapperElmt" v-for="seratocomponent in seratocomponents ">
         <label class="css-label" :for="seratocomponent.name" :style="{ backgroundImage: 'url(' + seratocomponent.src + ')' }" ></label>
-        <input class="css-checkbox" type="checkbox" :id="seratocomponent.name" v-model="itemComponent" :value="seratocomponent.id">
+        <input class="css-checkbox" type="checkbox" :id="seratocomponent.name" v-model="itemComponents" :value="seratocomponent.id">
       </div>
       <input type="submit" class="submit-button" placeholder="Submit">
     </form>
@@ -21,15 +21,15 @@ import seratocomponents from '../assets/seratocomponents';
 export default {
 
   name: 'SeratoLibrary',
-  data: function () {
+  data () {
     return {
       seratocomponents,
-      itemComponent: [],
+      itemComponents: [],
     };
   },
   methods: {
     submitItemToLayout() {
-      this.$store.commit('addLayerToLayout', this.itemComponent);
+      this.$store.commit('addLayerToLayout', this.itemComponents);
     },
   },
 

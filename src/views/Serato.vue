@@ -4,29 +4,36 @@
       <SeratoLibrary />
     </div>
     <div class="wrapperCanvas">
-      <div v-for="(item, index) in layoutAreaItems" :key="index">
-        <p>{{item}}</p>
+      <div v-for="items in layoutAreaItems">
+        <div v-for="item in items">
+          <div v-if="seratocomponents[item]">
+            <div class="css-label" :for="seratocomponents[item].id" :style="{ backgroundImage: 'url(' + seratocomponents[item].src + ')' }" ></div>
+          </div>
+        </div>
       </div>
-      <SeratoController />
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import SeratoLibrary from '@/components/SeratoLibrary.vue';
-import SeratoController from '@/components/SeratoController.vue';
+import seratocomponents from '../assets/seratocomponents';
 
 export default {
   name: 'Serato',
   components: {
     SeratoLibrary,
-    SeratoController,
   },
   computed: {
     layoutAreaItems() {
       return this.$store.state.layoutArea;
     },
   },
+  data () {
+    return {
+      seratocomponents
+    }
+  }
 };
 </script>
 

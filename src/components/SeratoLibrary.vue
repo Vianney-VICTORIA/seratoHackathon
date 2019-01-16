@@ -5,8 +5,8 @@
         @submit="submitItemToLayout"
         >
       <div class="wrapperElmt" v-for="seratocomponent in seratocomponents ">
-        <label class="css-label" :for="seratocomponent.name" :style="{ backgroundImage: 'url(' + seratocomponent.src + ')' }" ></label>
         <input class="css-checkbox" type="checkbox" :id="seratocomponent.name" v-model="itemComponents" :value="seratocomponent.id">
+        <label class="css-label" :for="seratocomponent.name" :style="{ backgroundImage: 'url(' + seratocomponent.src + ')' }" ></label>
       </div>
       <input type="submit" class="submit-button" placeholder="Submit">
     </form>
@@ -39,7 +39,7 @@ export default {
 <style>
 
 input[type=checkbox] {
-  display: block;
+  display: none;
 }
 
 .css-label{
@@ -51,9 +51,9 @@ input[type=checkbox] {
   background-size: contain;
 }
 
-input[type=checkbox].css-checkbox:checked + label.css-label {
+input[type=checkbox]:checked + label {
   background-position: 0 0;
-  border: 3px solid #2FBCDF;
+  border: 3px solid red;
 }
 
 </style>

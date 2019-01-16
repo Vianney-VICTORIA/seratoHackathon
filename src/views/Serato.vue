@@ -6,9 +6,11 @@
     <div class="wrapperCanvas">
       <div v-for="items in layoutAreaItems">
         <div v-for="item in items">
-          <div v-if="seratocomponents[item]">
-            <div class="css-label" :for="seratocomponents[item].id" :style="{ backgroundImage: 'url(' + seratocomponents[item].src + ')' }" ></div>
-          </div>
+          <vue-draggable-resizable :parent="false"  :draggable="true" v-if="seratocomponents[item]" >
+            <div class="item-component-img" :style="{ backgroundImage: 'url(' + seratocomponents[item].src + ')' }"></div>
+            <div class="removeItem"></div>
+            <div class="changeBackground"></div>
+          </vue-draggable-resizable>
         </div>
       </div>
     </div>
@@ -16,24 +18,30 @@
 </template>
 
 <script type="text/ecmascript-6">
+import Vue from 'vue';
 import SeratoLibrary from '@/components/SeratoLibrary.vue';
+import VueDraggableResizable from 'vue-draggable-resizable';
 import seratocomponents from '../assets/seratocomponents';
+
+Vue.component('vue-draggable-resizable', VueDraggableResizable);
+
 
 export default {
   name: 'Serato',
   components: {
     SeratoLibrary,
+    VueDraggableResizable,
   },
   computed: {
     layoutAreaItems() {
       return this.$store.state.layoutArea;
     },
   },
-  data () {
+  data() {
     return {
-      seratocomponents
-    }
-  }
+      seratocomponents,
+    };
+  },
 };
 </script>
 
@@ -62,6 +70,14 @@ export default {
   position: relative;
   top: 0;
   overflow: scroll;
+}
+
+.item-component-img{
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
 }
 
 

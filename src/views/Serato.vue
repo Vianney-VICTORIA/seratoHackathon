@@ -1,19 +1,23 @@
 <template>
-  <div id="serato">
-    <div class="wrapperLibrary">
-      <SeratoLibrary />
-    </div>
-    <div class="wrapperCanvas">
-      <div v-for="items in layoutAreaItems">
-        <div v-for="item in items">
-          <vue-draggable-resizable :parent="false"  :draggable="true" v-if="seratocomponents[item]" >
-            <div class="item-component-img" :style="{ backgroundImage: 'url(' + seratocomponents[item].src + ')' }"></div>
-            <div class="removeItem"></div>
-            <div class="changeBackground"></div>
-          </vue-draggable-resizable>
-        </div>
-      </div>
-    </div>
+  <div>
+    <v-layout row wrap>
+      <v-flex xs3>
+        <SeratoLibrary />
+      </v-flex>
+      <v-flex xs9>
+        <v-card dark color="primary">
+          <div v-for="items in layoutAreaItems">
+            <div v-for="item in items">
+              <vue-draggable-resizable :parent="false"  :draggable="true" v-if="seratocomponents[item]" >
+                <div class="item-component-img" :style="{ backgroundImage: 'url(' + seratocomponents[item].src + ')' }"></div>
+                <div class="removeItem"></div>
+                <div class="changeBackground"></div>
+              </vue-draggable-resizable>
+            </div>
+          </div>
+        </v-card>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 
@@ -47,30 +51,7 @@ export default {
 
 <style lang="scss">
 
-.wrapperLibrary{
-  display: inline-block;
-  border: 1px solid aquamarine;
-  height: 80vh;
-  min-height: 80vh;
-  max-height: 80vh;
-  width:10vw;
-  margin-right: 15px;
-  position: relative;
-  top: 0;
-  overflow: scroll;
-}
 
-.wrapperCanvas{
-  display: inline-block;
-  border: 1px solid coral;
-  height: 80vh;
-  min-height: 80vh;
-  max-height: 80vh;
-  width:80vw;
-  position: relative;
-  top: 0;
-  overflow: scroll;
-}
 
 .item-component-img{
   height: 100%;

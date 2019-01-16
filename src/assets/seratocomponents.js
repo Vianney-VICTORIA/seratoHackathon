@@ -1,8 +1,7 @@
 const image = require.context('./images', true, /\.png$/)
 
 
-const seratocomponents =
-[
+const seratocomponents = [
   {
     id: 1,
     name: '1/4 inch RCA Input1',
@@ -47,7 +46,7 @@ const seratocomponents =
     id: 9,
     name: '1/8 Output',
     src: image('./1-8-input.png'),
-  }
+  },
 ]
 
 export default seratocomponents;

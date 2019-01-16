@@ -1,12 +1,26 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/serato">Serato</router-link> |
-      <router-link to="/hardware">Hardware Customization</router-link>
+      <v-toolbar>
+        <v-toolbar-title>SERATO</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items class="hidden-sm-and-down">
+          <v-btn flat>
+            <router-link to="/">Home</router-link>
+          </v-btn>
+          <v-btn flat>
+            <router-link to="/serato">Serato</router-link>
+          </v-btn>
+        </v-toolbar-items>
+      </v-toolbar>
     </div>
-    <router-view/>
+    <v-app>
+      <v-content>
+        <v-container fluid>
+          <router-view/>
+        </v-container>
+      </v-content>
+    </v-app>
   </div>
 </template>
 
@@ -19,7 +33,6 @@
   color: #2c3e50;
 }
 #nav {
-  padding: 30px;
   a {
     font-weight: bold;
     color: #2c3e50;

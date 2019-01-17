@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-layout row wrap>
-      <v-flex xs2>
+      <v-flex xs3>
         <SeratoLibrary />
       </v-flex>
-      <v-flex xs10>
+      <v-flex xs9 class="text-xs-right">
         <v-card dark color="background" class="cardContainer">
           <div v-for="items in layoutAreaItems">
             <div v-for="item in items">
@@ -16,14 +16,14 @@
             </div>
           </div>
         </v-card>
-        <v-btn fab dark large color="purple">
-          <v-icon dark>folder_shared</v-icon>
+        <v-btn fab dark small color="purple">
+          <v-icon dark >folder_shared</v-icon>
         </v-btn>
-        <v-btn fab dark large color="purple">
-          <v-icon dark>android</v-icon>
+        <v-btn fab dark small color="purple">
+          <v-icon dark >android</v-icon>
         </v-btn>
-        <v-btn fab dark large color="purple">
-          <v-icon dark>save</v-icon>
+        <v-btn fab dark small color="purple">
+          <v-icon dark >save</v-icon>
         </v-btn>
       </v-flex>
     </v-layout>

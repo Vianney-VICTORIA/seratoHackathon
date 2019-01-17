@@ -1,17 +1,12 @@
 <template>
   <div id="app">
     <v-app dark>
-      <v-toolbar>
-        <v-toolbar-title>SERATO HARDWARE UI</v-toolbar-title>
+      <v-toolbar color="black">
         <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn flat>
-            <router-link to="/">Home</router-link>
-          </v-btn>
-          <v-btn flat>
-            <router-link to="/serato">Serato</router-link>
-          </v-btn>
-        </v-toolbar-items>
+        <v-toolbar-title>
+          <img src="https://m.cdn.sera.to/logos/logo.svg" alt="Logo Serato" class="logo">
+        </v-toolbar-title>
+        <v-spacer></v-spacer>
       </v-toolbar>
       <v-content>
         <v-container fluid>
@@ -38,5 +33,8 @@
       color: #42b983;
     }
   }
+}
+.logo{
+  width: 100px;
 }
 </style>

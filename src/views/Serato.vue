@@ -1,11 +1,11 @@
 <template>
   <div>
     <v-layout row wrap>
-      <v-flex xs3>
+      <v-flex xs2>
         <SeratoLibrary />
       </v-flex>
-      <v-flex xs9>
-        <v-card dark color="primary">
+      <v-flex xs10>
+        <v-card dark color="background" class="cardContainer">
           <div v-for="items in layoutAreaItems">
             <div v-for="item in items">
               <vue-draggable-resizable :parent="false"  :draggable="true" v-if="seratocomponents[item]" >
@@ -16,6 +16,15 @@
             </div>
           </div>
         </v-card>
+        <v-btn fab dark large color="purple">
+          <v-icon dark>folder_shared</v-icon>
+        </v-btn>
+        <v-btn fab dark large color="purple">
+          <v-icon dark>android</v-icon>
+        </v-btn>
+        <v-btn fab dark large color="purple">
+          <v-icon dark>save</v-icon>
+        </v-btn>
       </v-flex>
     </v-layout>
   </div>
@@ -50,9 +59,9 @@ export default {
 </script>
 
 <style lang="scss">
-
-
-
+.cardContainer{
+  height: 80vh;
+}
 .item-component-img{
   height: 100%;
   width: 100%;
